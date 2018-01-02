@@ -59,12 +59,12 @@ namespace privacyIDEAprovider
             }
         }
         /// <summary>
-        /// Trigger for a otp challange to the PID3
+        /// Trigger for a otp challenge to the PID3
         /// </summary>
         /// <param name="OTPuser">User name for the token</param>
         /// <param name="realm">Domain/realm name</param>
         /// <param name="token">Admin token</param>
-        public void triggerChellange(string OTPuser, string realm, string token)
+        public void triggerChallenge(string OTPuser, string realm, string token)
         {
             try
             {
@@ -77,6 +77,7 @@ namespace privacyIDEAprovider
                            { "user", OTPuser},
                            { "realm ", realm},
                     });
+                    Debug.WriteLine(getJsonNode(Encoding.UTF8.GetString(response),"messages"));
                 }
             }
             catch (WebException wex)
