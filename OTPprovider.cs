@@ -34,7 +34,7 @@ namespace privacyIDEAprovider
             try
             {
                 // check if otp contains only numbers
-                if (!IsDigitsOnly(OTPpin)) return false;
+                // if (!IsDigitsOnly(OTPpin)) return false;
 
                 using (WebClient client = new WebClient())
                 {
